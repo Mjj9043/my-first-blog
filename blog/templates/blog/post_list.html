@@ -8,11 +8,13 @@
     <h1><a href="/">Midnight's Selah</a></h1>
   </div>
 
+  {% for post in posts %}
   <div>
-    <p>published: 13.04.2019, 13:15</p>
-    <h2><a href="">Second Post</a></h2>
-    <p>Get ready!</p>
+    published: {{ post.published_date }}</p>
+     <h2><a href="">{{ post.title }}</a></h2>
+     <p>{{ post.text|linebreaksbr }}</p>
   </div>
+  {% endfor %}
 
 </body>
 </html>
